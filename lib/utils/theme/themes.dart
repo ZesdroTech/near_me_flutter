@@ -33,6 +33,6 @@ class AppThemes {
       inputDecorationTheme: AppInputTheme.darkInputDecorationTheme,
       iconTheme: AppIconTheme.darkIconTheme,
       dividerColor: AppColors.darkContainerBackground,
-    backgroundColor: Colors.grey.shade600
+      backgroundColor: Colors.grey.shade600
       );
 }
