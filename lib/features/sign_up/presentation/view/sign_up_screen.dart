@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:near_me_main_project/features/sign_up/presentation/widgets/guest_user_button_signup.dart';
 import 'package:near_me_main_project/utils/app_constants/app_colors.dart';
+import 'package:near_me_main_project/utils/app_constants/app_sized_box.dart';
 
 import '../../../../utils/app_constants/app_padding.dart';
 import '../../../../utils/common_widgets/common_button.dart';
@@ -21,50 +23,37 @@ class SignUpScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          TopSectionAppBar(screenHeight * 0.15.h).buildTopSection(),
-          // SizedBox(
-          //   height: 32.h,
-          // ),
-          SizedBox(
-            height: 116.h,
-            width: 96.w,
-            child: SvgPicture.asset(
-              'assets/images/near_me_main_logo.svg',
-              fit: BoxFit.fitHeight,
-            ),
-          ),
+          TopSection(
+                  screenWidth: screenWidth,
+                  screenHeight: screenHeight,
+                  isSignUp: true)
+              .topAppBarSignIn(),
+          AppSizedBox().sized16v,
+
           SignupMainText(
             screenWidth: screenWidth,
           ),
-          SizedBox(
-            height: 8.h,
-          ),
+          AppSizedBox().sized8v,
           Center(
               child: Text(
-            'Discover exclusive local deals,\nexplore nearby offers, and start saving\ntoday with us.',
+            'Discover exclusive local deals,explore \nnearby offers, and start saving today with us.',
             textAlign: TextAlign.center,
-            style: Theme.of(context).textTheme.titleMedium,
+            style: Theme.of(context).textTheme.bodyLarge,
           )),
-          SizedBox(
-            height: 16.h,
-          ),
+          AppSizedBox().sized24v,
           // signUP cards for login with multiple options like google ,facebook , apple id
           SignUpCard(
             image: 'assets/images/google_logo.svg',
             onPressed: () {},
             text: 'Sign up with Google',
           ),
-          SizedBox(
-            height: 16.h,
-          ),
+          AppSizedBox().sized8v,
           SignUpCard(
             image: 'assets/images/facebook_logo.svg',
             onPressed: () {},
             text: 'Sign up with Facebook',
           ),
-          SizedBox(
-            height: 16.h,
-          ),
+          AppSizedBox().sized8v,
 
           SignUpCard(
             image: 'assets/images/apple_logo.svg',
@@ -72,22 +61,18 @@ class SignUpScreen extends StatelessWidget {
             text: 'Sign up with Apple ID',
           ),
 
-          SizedBox(
-            height: 16.h,
-          ),
+          AppSizedBox().sized16v,
           DividerArea(width: screenWidth).buildDivider(context),
-          SizedBox(
-            height: 16.h,
-          ),
+          AppSizedBox().sized16v,
 
           Padding(
             padding: AppPadding.padding24Horizontal,
             child: DefaultButton(
-                text: 'Create an Account', onButtonPressed: () {}),
+                text: 'Login with Email Address', onButtonPressed: () {}),
           ),
-          SizedBox(
-            height: 16.h,
-          ),
+          AppSizedBox().sized8v,
+          GuestLoginButtonSignUp().buildGuestLoginButton(context),
+          AppSizedBox().sized30v,
           Center(child: SignUpSpanText().buildSpanText(context)),
         ],
       ),

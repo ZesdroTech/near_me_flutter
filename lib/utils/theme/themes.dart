@@ -18,8 +18,9 @@ class AppThemes {
     elevatedButtonTheme: AppElevatedButtonTheme.lightEleavatedButton,
     inputDecorationTheme: AppInputTheme.lightInputDecorationTheme,
     iconTheme: AppIconTheme.lightIconTheme,
-    dividerColor: AppColors.lightContainerBackground,
-    backgroundColor: Colors.grey.shade300
+    dividerColor: Colors.white,
+    backgroundColor: Colors.grey.shade300,
+    hintColor: Colors.grey.shade200,
   );
 
   // Theme for dark mode
@@ -33,6 +34,7 @@ class AppThemes {
       inputDecorationTheme: AppInputTheme.darkInputDecorationTheme,
       iconTheme: AppIconTheme.darkIconTheme,
       dividerColor: AppColors.darkContainerBackground,
-      backgroundColor: Colors.grey.shade600
+      backgroundColor: Colors.grey.shade600,
+    hintColor: Colors.grey.shade400,
       );
 }

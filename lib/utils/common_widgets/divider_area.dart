@@ -12,13 +12,16 @@ class DividerArea {
       padding: EdgeInsets.symmetric(horizontal: 24.w),
       child: Row(
         children: [
-            Expanded(child: Divider(thickness: 1, color: Theme.of(context).dividerColor,
+          Expanded(
+              child: Divider(
+            thickness: 1,
+            color: Theme.of(context).hintColor,
           )),
           SizedBox(
             width: 8.w,
           ),
           Text(
-            'Or',
+            'or',
             style: Theme.of(context).textTheme.bodyLarge,
           ),
           SizedBox(
@@ -27,7 +30,7 @@ class DividerArea {
           Expanded(
               child: Divider(
             thickness: 1,
-            color: Theme.of(context as BuildContext).dividerColor,
+            color: Theme.of(context).hintColor,
           ))
         ],
       ),

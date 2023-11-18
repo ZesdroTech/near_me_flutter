@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:near_me_main_project/utils/app_constants/app_sized_box.dart';
 
 import '../../../../utils/app_constants/app_colors.dart';
 import '../../../../utils/app_constants/app_padding.dart';
@@ -38,7 +39,7 @@ class SignInScreen extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 48.h,
+            height: 100.h,
           ),
           // Textform fields
           LoginTextFields(
@@ -46,56 +47,47 @@ class SignInScreen extends StatelessWidget {
             hintText: 'Your email address ',
           ).buildLoginTextFields(context),
           SizedBox(
-            height: 40.h,
+            height: 32.h,
           ),
           LoginTextFields(
             controller: null,
             hintText: 'Password',
           ).buildLoginTextFields(context),
-          SizedBox(
-            height: 32.h,
-          ),
+          AppSizedBox().sized16v,
 
           Padding(
             padding: AppPadding.padding24Horizontal,
-            child: Text(
-              'Forgot Password?',
-              style:
-                  TextStyle(color: AppColors.blue, fontWeight: FontWeight.w600,fontSize: 16.sp),
+            child: SizedBox(
+              width: double.infinity,
+              child: Text(
+                'Forgot Password?',
+                textAlign: TextAlign.end,
+                style: Theme.of(context).textTheme.labelLarge,
+              ),
             ),
           ),
-          SizedBox(
-            height: 40.h,
-          ),
+          AppSizedBox().sized32v,
           Padding(
             padding: AppPadding.padding24Horizontal,
             child: DefaultButton(text: 'Log in ', onButtonPressed: () {}),
           ),
-          SizedBox(
-            height: 16.h,
-          ),
+          AppSizedBox().sized16v,
           DividerArea(width: screenWidth).buildDivider(context),
-          SizedBox(
-            height: 28.h,
-          ),
-          //sign up cards for login with several applications
+          AppSizedBox().sized16v,
+          // sign up cards for login with several applications
           SignUpCard(
             image: 'assets/images/google_logo.svg',
             onPressed: () {},
             text: 'Login with Google ',
           ),
-          SizedBox(
-            height: 16.h,
-          ),
+        AppSizedBox().sized8v,
           SignUpCard(
             image: 'assets/images/facebook_logo.svg',
             onPressed: () {},
             text: 'Login with Facebook ',
           ),
 
-          SizedBox(
-            height: 16.h,
-          ),
+          AppSizedBox().sized8v,
           SignUpCard(
             image: 'assets/images/apple_logo.svg',
             onPressed: () {},

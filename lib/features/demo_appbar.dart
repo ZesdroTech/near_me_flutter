@@ -1,36 +1,36 @@
 import 'package:flutter/material.dart';
 
-class DemoAppbar extends StatelessWidget {
-  const DemoAppbar({super.key});
-
+class DemoAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      appBar: AppBar(
-        centerTitle: true,
-        elevation: 0,
-        toolbarHeight: 90,
-        title: Text(
-          'Demo',
-          style: const TextStyle(color: Colors.black),
-        ),
-
-        flexibleSpace: Container(
-          decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  colors: [Colors.grey, Colors.white],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  stops: [0.0, 2.0],
-
-
+backgroundColor: Colors.black,
+        appBar: PreferredSize(
+            preferredSize: Size.fromHeight(160.0), // here the desired height
+          child: Stack(
+            children: [
+              // Background image
+              Transform(
+                transform: Matrix4.rotationZ(0.0)..scale(1.0),
+                child: Image.asset(
+                  'assets/images/app_bar_shade.png',
+                  // opacity:,
+                  fit: BoxFit.fill,
+                  height: 160.0,
+                  width: double.infinity,
+                ),
               ),
-              image: DecorationImage(
-                  image: AssetImage('assets/images/pattern (3).png'),
-                  fit: BoxFit.fill)),
+              // AppBar content
+              AppBar(
+                backgroundColor: Colors.transparent,
+                elevation: 0,
+                // Other AppBar properties and content
+                title: Text('Your App Title'),
+              ),
+            ],
+          ),
         ),
-      ),
+
     );
   }
 }

@@ -42,17 +42,17 @@ class AccountCreationScreen extends StatelessWidget {
                   isPhone: true)
               .buildTextField(context),
           SizedBox(height: 24.h,),
-          AccountCreationTextField(title: 'Password', hint: '*******')
-              .buildTextField(context),
-          SizedBox(height: 24.h,),
-          AccountCreationTextField(
-                  title: 'Confirm password', hint: '********')
-              .buildTextField(context),
-          SizedBox(height: 40.h,),
-          Padding(
-            padding: AppPadding.padding24Horizontal,
-            child: DefaultButton(text: 'Create Account', onButtonPressed: (){}),
-          )
+          // AccountCreationTextField(title: 'Password', hint: '*******')
+          //     .buildTextField(context),
+          // SizedBox(height: 24.h,),
+          // AccountCreationTextField(
+          //         title: 'Confirm password', hint: '********')
+          //     .buildTextField(context),
+          // SizedBox(height: 40.h,),
+          // Padding(
+          //   padding: AppPadding.padding24Horizontal,
+          //   child: DefaultButton(text: 'Create Account', onButtonPressed: (){}),
+          // )
         ],
       ),
     );

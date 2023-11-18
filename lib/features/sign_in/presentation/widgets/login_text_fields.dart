@@ -17,11 +17,10 @@ class LoginTextFields {
       child: TextFormField(
         controller: controller,
         decoration: InputDecoration(
-            hintText: hintText,hintStyle: Theme.of(context).textTheme.titleMedium,
+            hintText: hintText,hintStyle: Theme.of(context).textTheme.bodyLarge,
+            contentPadding: EdgeInsets.symmetric(vertical: 8),
             border: UnderlineInputBorder(
-              borderSide: BorderSide(
-                color: Colors.grey.withOpacity(0.5),// Set opacity here
-              ),
+
             )),
       ),
     );

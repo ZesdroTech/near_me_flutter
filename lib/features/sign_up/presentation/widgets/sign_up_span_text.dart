@@ -11,14 +11,11 @@ class SignUpSpanText {
             children: [
               Text(
                 'Already have an account ?',
-                style: Theme.of(context).textTheme.bodyLarge,
+                style: Theme.of(context).textTheme.bodySmall,
               ),
               Text(
                 'Sign In',
-                style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                    color: AppColors.blue),
+                style:  Theme.of(context).textTheme.labelMedium,
               ),
             ],
           ),

@@ -15,7 +15,10 @@ class TopSection {
   // ignore: prefer_typing_uninitialized_variables
   var screenHeight;
 
-  TopSection({this.screenWidth, this.screenHeight, this.isSignUp = false});
+  TopSection(
+      {this.isSignUp = false,
+      required this.screenWidth,
+      required this.screenHeight});
 
   Widget topAppBarSignIn() {
     if (!isSignUp) {
@@ -25,31 +28,24 @@ class TopSection {
           Positioned(
             top: 0,
             child: Container(
-              height: screenHeight * 0.17.h,
+              height: 120.h,
+
             ),
           ),
-          TopSectionAppBar(screenHeight * 0.17.h).buildTopSection(),
-          Positioned(
-            top: 72.h,
+          TopSectionAppBar(120.h).buildTopSection(),
+          Positioned.fill(
+            top: 20.h,
             child: Padding(
               padding: AppPadding.padding24Horizontal,
-              child: Row(
-                children: [
-                  const Icon(
-                    Icons.arrow_back_ios,
+              child: Center(
+                child: SizedBox(
+                  height: 20.h,
+                  width: 116.w,
+                  child: SvgPicture.asset(
+                    'assets/images/near_me_logo.svg',
+                    fit: BoxFit.cover,
                   ),
-                  SizedBox(
-                    width: 102.w,
-                  ),
-                  SizedBox(
-                    height: 20.h,
-                    width: 116.w,
-                    child: SvgPicture.asset(
-                      'assets/images/near_me_logo.svg',
-                      fit: BoxFit.cover,
-                    ),
-                  )
-                ],
+                ),
               ),
             ),
           ),
@@ -59,18 +55,19 @@ class TopSection {
       // If isSignIn is false, show the Positioned widget
       // it Include the top section with LOGO
       return Stack(
-
         children: [
           Container(
             height: screenHeight * 0.23.h,
           ),
-          Positioned(
+          Positioned.fill(
             top: 60,
-            left: screenWidth * 0.38.h,
-            child: SizedBox(
-              height: 116.h,
-              width: 96.h,
-              child: SvgPicture.asset("assets/images/near_me_main_logo.svg"),
+            // left: screenWidth * 0.38.h,
+            child: Center(
+              child: SizedBox(
+                height: 116.h,
+                width: 96.h,
+                child: SvgPicture.asset("assets/images/near_me_main_logo.svg"),
+              ),
             ),
           ),
           TopSectionAppBar(screenHeight * 0.18.h).buildTopSection(),
@@ -87,7 +84,7 @@ class TopSectionAppBar {
 
   Widget buildTopSection() {
     return SizedBox(
-      height: 132.h,
+      height: 120.h,
       width: double.infinity,
       child: Container(
         decoration: const BoxDecoration(

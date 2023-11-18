@@ -24,7 +24,7 @@ class AccountCreationTextField {
         children: [
           Text(
             title,
-            style: Theme.of(context).textTheme.titleMedium,
+            style: Theme.of(context).textTheme.labelSmall,
           ),
           Row(
             children: [
@@ -57,8 +57,7 @@ class AccountCreationTextField {
                     decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: hint,
-                        hintStyle: const TextStyle(
-                            fontWeight: FontWeight.bold, color: Colors.black)),
+                        hintStyle: Theme.of(context).textTheme.titleSmall),
                   ),
                 ),
               ),

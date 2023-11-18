@@ -9,7 +9,7 @@ class AppElevatedButtonTheme {
       style: ElevatedButton.styleFrom(
           elevation: 0,
           foregroundColor: Colors.white,
-          backgroundColor: Colors.red,
+          backgroundColor: AppColors.blue,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
           padding: EdgeInsets.symmetric(vertical: 8.h),
           textStyle: TextStyle(fontSize: 16.sp,fontWeight: FontWeight.w500),));

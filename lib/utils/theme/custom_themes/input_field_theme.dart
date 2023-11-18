@@ -28,10 +28,10 @@ class AppInputTheme {
     suffixIconColor: Colors.grey,
     // Set border styles
     border: const OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.transparent),
+      borderSide: BorderSide(color: Colors.yellow),
     ),
     focusedBorder: const OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.transparent),
+      borderSide: BorderSide(color: Colors.red),
     ),
   );
 }
