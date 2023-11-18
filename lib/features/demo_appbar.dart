@@ -27,6 +27,7 @@ backgroundColor: Colors.black,
                 // Other AppBar properties and content
                 title: Text('Your App Title'),
               ),
+              SizedBox(),
             ],
           ),
         ),
